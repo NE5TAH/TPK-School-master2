@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="199dp"
         android:clipToPadding="false"
-        android:gravity="center"
+        android:gravity="fill_horizontal"
         android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
@@ -111,12 +111,13 @@
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
+
     <LinearLayout
+        android:layout_width="448dp"
+        android:layout_height="337dp"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
         <android.support.v7.widget.CardView
             android:id="@+id/CardView_website"
@@ -209,6 +210,7 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
             android:id="@+id/CardView_social"
             android:layout_width="160dp"
