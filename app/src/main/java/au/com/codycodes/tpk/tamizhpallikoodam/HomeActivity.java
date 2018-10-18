@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     CardView website;
     CardView about;
     CardView social;
+    CardView drawing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,6 +112,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 showAbout(view);
             }
         });
+
+        drawing = (CardView) findViewById(R.id.CardView_drawing);
+// Set a click listener on that View
+        drawing.setOnClickListener(new View.OnClickListener() {
+            // The code
+            // in this method will be executed when the colors category is clicked on.
+            @Override
+            public void onClick(View view) {
+
+                showDrawing(view);
+            }
+        });
     }
 
 
@@ -175,7 +188,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        else if (id == R.id.nav_drawing) {
+        showSocial(drawing);
+
+    }
+
+
+    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -221,5 +241,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         // Start the new activity
         startActivity(socialIntent);
+    }
+
+    public void showDrawing(View view){
+
+        // Create a new intent to open the {@link VocabActivity}
+        Intent drawingIntent = new Intent(HomeActivity.this, DrawingActivity.class);
+
+        // Start the new activity
+        startActivity(drawingIntent);
     }
 }

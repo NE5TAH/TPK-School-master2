@@ -32,6 +32,9 @@
 
     <string name="category_social"> Social</string>
 
+    <string name="category_drawing"> Drawing</string>
+
+
     <!-- details for the game [CHAR LIMIT=20] -->
     <string name="details_game">Word matching game</string>
 
@@ -39,6 +42,8 @@
     <string name="details_about">About this app</string>
 
     <string name="details_social">Social Media</string>
+
+    <string name="details_drawing">Drawing Game</string>
 
     <!-- details for the website [CHAR LIMIT=20] -->
     <string name="details_website">Visit school website</string>

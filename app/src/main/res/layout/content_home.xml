@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
-    android:gravity="center"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
     android:id="@+id/ll">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="199dp"
         android:clipToPadding="false"
@@ -20,8 +19,8 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/CardView_vocabulary"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground">
@@ -66,8 +65,8 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/CardView_game"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground">
@@ -110,19 +109,10 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="448dp"
-        android:layout_height="337dp"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="vertical">
-
         <android.support.v7.widget.CardView
             android:id="@+id/CardView_website"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground">
@@ -164,100 +154,152 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
+    </GridLayout>
+    <GridLayout
+    android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/CardView_about"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
 
-            <LinearLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView_about"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_shape_about"
+                android:padding="10dp"
+                android:src="@drawable/about" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/category_about"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold" />
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:padding="5dp"
+                android:text="@string/details_about"
+                android:textColor="@android:color/darker_gray" />
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circle_shape_about"
-                    android:padding="10dp"
-                    android:src="@drawable/about" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/category_about"
-                    android:textColor="@color/cardview_dark_background"
-                    android:textStyle="bold" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView_social"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/lightgray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="@string/details_about"
-                    android:textColor="@android:color/darker_gray" />
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_shape_about"
+                android:padding="10dp"
+                android:src="@drawable/social" />
 
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/category_social"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold" />
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/CardView_social"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
-
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:padding="5dp"
+                android:text="@string/details_social"
+                android:textColor="@android:color/darker_gray" />
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circle_shape_about"
-                    android:padding="10dp"
-                    android:src="@drawable/social" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/category_social"
-                    android:textColor="@color/cardview_dark_background"
-                    android:textStyle="bold" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardView_drawing"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/lightgray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="@string/details_social"
-                    android:textColor="@android:color/darker_gray" />
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_shape_vocab"
+                android:padding="10dp"
+                android:src="@drawable/drawing" />
 
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/category_drawing"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/lightgray" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/details_drawing"
+                android:textColor="@android:color/darker_gray" />
 
-</LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</GridLayout>
+</GridLayout>

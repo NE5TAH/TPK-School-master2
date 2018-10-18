@@ -9,18 +9,23 @@
             android:icon="@drawable/vocabulary"
             android:title="@string/category_vocabulary" />
         <item
-            android:id="@+id/nav_game"
-            android:icon="@drawable/game"
-            android:title="@string/category_game" />
+        android:id="@+id/nav_game"
+        android:icon="@drawable/game"
+        android:title="@string/category_game" />
+
+        <item
+            android:id="@+id/nav_drawing"
+            android:icon="@drawable/drawing"
+            android:title="@string/category_drawing" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/website"
             android:title="@string/category_website"
             android:visible="false"/>
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/about"
-            android:title="@string/category_about" android:visible="false"/>
+        android:id="@+id/nav_manage"
+        android:icon="@drawable/about"
+        android:title="@string/category_about" android:visible="false"/>
         <item
             android:id="@+id/nav_social"
             android:icon="@drawable/social"
